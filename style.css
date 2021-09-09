@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+}
+header {
+    display: flex;
+    height: 20vh;
+}
+
+.title>h1{
+    color: white;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 3.5vh;
+    z-index: 3;
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 5%;
+}
+
+.title_img {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    z-index: 1;
+}
+/*---------------voir pourquoi ça ne marche pas-------------*/
+.title_img::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: rgba(0,0,0,0.8);
+    opacity: 1;
+}
+nav{
+    display:flex;
+}
+/*--------------high button menu-------------------------*/
+.menu_hidden{
+    flex: auto;
+}
+
+button {
+    margin-top: 1vh;
+    background-color: white;
+    border: none;
+    color:black;
+}
+
+button img {
+    height: 3vh;
+}
+
+.search_button{
+    flex: initial;
+}
+
+.shop_button {
+    flex: initial;
+}
+
+
+/*----------------------- sliding menu ------------------*/
+.shown_menu {
+    margin-top: 0.5vh;
+}
+
+.shown_menu ul{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.scrolling_menu li {
+    align-items: center;
+    padding: 1.5vh;
+    background-color: brown;
+    border:5px black;
+}
+.scrolling_menu li a {
+    padding: 2vh;
+    font-family: 'Merriweather', serif;;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.scrolling_menu li a img:hover {
+    transform: scale(1.5, 1.5);
+}
