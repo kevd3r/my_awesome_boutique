@@ -1,52 +1,52 @@
 body {
-    margin: 0;
+  margin: 0;
 }
 header {
-    display: flex;
-    height: 20vh;
+  display: flex;
+  height: 20vh;
 }
 
 .title>h1{
-    color: white;
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 3.5vh;
-    z-index: 3;
-    position: absolute;
-    margin-top: 15%;
-    margin-left: 5%;
+  color: white;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 3.5vh;
+  z-index: 3;
+  position: absolute;
+  margin-top: 15%;
+  margin-left: 5%;
 }
 
 .title_img {
-    width: 100%;
-    margin: 0;
-    display: flex;
-    z-index: 1;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  z-index: 1;
 }
 /*---------------voir pourquoi ça ne marche pas-------------*/
 .title_img::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 2;
-    background: rgba(0,0,0,0.8);
-    opacity: 1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background: rgba(0,0,0,0.8);
+  opacity: 1;
 }
 nav{
     display:flex;
 }
 /*--------------high button menu-------------------------*/
 .menu_hidden{
-    flex: auto;
+  flex: auto;
 }
 
 button {
-    margin-top: 1vh;
-    background-color: white;
-    border: none;
-    color:black;
+  margin-top: 1vh;
+  background-color: white;
+  border: none;
+  color:black;
 }
 
 button img {
@@ -54,38 +54,50 @@ button img {
 }
 
 .search_button{
-    flex: initial;
+  flex: initial;
 }
 
 .shop_button {
-    flex: initial;
+  flex: initial;
 }
 
 
 /*----------------------- sliding menu ------------------*/
 .shown_menu {
-    margin-top: 0.5vh;
+  margin: 0.5vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows:repeat(3, 1fr);
+  margin-top: 0.5vh;
+  gap: 2vw;
 }
 
-.shown_menu ul{
-    text-decoration: none;
-    list-style-type: none;
+.menu-item {
+  width: 32vw;
+  height: 32vw;
+  background-color: lightslategrey;
+  border: 2px black;
+  font-family: 'Merriweather', serif;
+  border-radius: 5%;
+
+}
+.menu-item7{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  border-radius: 5%;
+  border: black;
+  width: 100%;
+  height: 7vh;
+  background-color: lightgrey;
+  font-family: 'Merriweather', serif;
 }
 
-.scrolling_menu li {
-    align-items: center;
-    padding: 1.5vh;
-    background-color: brown;
-    border:5px black;
+.menu-item a {
+  text-decoration: none;
+  color: black;
 }
-.scrolling_menu li a {
-    padding: 2vh;
-    font-family: 'Merriweather', serif;;
-    font-size: 1rem;
-    text-decoration: none;
-    color: black;
-}
-
-.scrolling_menu li a img:hover {
-    transform: scale(1.5, 1.5);
+.menu-item7 a {
+  text-decoration: none;
+  color: black;
 }
