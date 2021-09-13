@@ -56,6 +56,9 @@ button img {
     height: 3vh;
 }
 
+#menu-button:hover {
+  transform: scale(1.2);
+}
 .search_button{
   flex: initial;
 }
@@ -66,6 +69,13 @@ button img {
 
 
 /*----------------------- sliding menu ------------------*/
+.hideAndShow {
+  display: none;
+}
+.hideAndShow.is-open {
+  display: flex;
+}
+
 .shown_menu {
   margin: 4vw;
   display: grid;
@@ -73,6 +83,11 @@ button img {
   grid-template-rows:repeat(3, 1fr);
   margin-top: 0.5vh;
   gap: 4vw;
+}
+
+.shown_menu>a {
+  text-decoration: none;
+  color: black;
 }
 
 .menu-item {
@@ -83,6 +98,8 @@ button img {
   border-radius: 5%;
   border: 1px solid black;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .menu-item7{
   grid-column-start: 1;
@@ -95,6 +112,8 @@ button img {
   font-family: 'Merriweather', serif;
   font-weight: bold;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-item a {
@@ -113,13 +132,9 @@ button img {
 }
 
 .menu-item:hover{
-  background-color: lightslategray;
+  background-color: lightgray;
 }
 
 .menu-item7:hover{
   background-color: lightslategray;
-}
-
-.hideAndShow {
-  display: none;
 }
