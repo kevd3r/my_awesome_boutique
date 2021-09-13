@@ -108,7 +108,7 @@ button img {
 .menu-item>a {
   text-decoration: none;
   color: black;
-  font-size: 2.5vh;
+  font-size: 2vh;
 }
 
 .menu-item7{
@@ -129,7 +129,7 @@ button img {
 }
 
 .menu-item7>a {
-  font-size: 2.5vh;
+  font-size: 2vh;
   text-decoration: none;
   color: black;
 }
@@ -142,4 +142,27 @@ button img {
 .menu-item7:hover{
   background-color: lightgray;
   transform: scale(1.01);
+}
+
+/*-----------------article's css---------------------*/
+.article{
+  font-family: 'Merriweather', serif;
+}
+
+.article h3 {
+  font-size: 2vh;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+
+ .press{
+  display: inline;
+  justify-content: center;
+ }
+
+.press>img {
+
+  width: 60%;
+  height: auto;
+  
 }
