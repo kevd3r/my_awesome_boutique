@@ -5,3 +5,8 @@ button.addEventListener('click', function(e){
     this.classList.toggle('is-open');
     nav.classList.toggle('is-open');
 });
+
+let item = document.getElementsByName('menu-item');
+
+
+console.log(item.innerText);

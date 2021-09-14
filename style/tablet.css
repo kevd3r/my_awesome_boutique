@@ -1,0 +1,20 @@
+@media  screen and(max-width :1024px) {
+  /*------------ header's css modification ----------*/
+  .title{
+    display: flex;
+  }
+  
+  .title>h1{
+    color:white;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 3.5vh;
+    z-index: 3;
+    position: absolute;
+  }
+  
+  .title_img {
+    margin: 0;
+    display: inline-block;
+    z-index: 1;
+  }   
+}
