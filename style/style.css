@@ -59,8 +59,15 @@ button img {
   flex: initial;
 }
 
+.search_button:hover{
+  transform: scale(1.1);
+}
 .shop_button {
   flex: initial;
+}
+
+.shop_button:hover{
+  transform: scale(1.1);
 }
 
 
@@ -103,7 +110,7 @@ button img {
 
 .menu-item>a {
   text-decoration: none;
-  color: black;
+  color: lightslategray;
   font-size: 2vh;
 }
 
@@ -127,7 +134,7 @@ button img {
 .menu-item7>a {
   font-size: 2vh;
   text-decoration: none;
-  color: black;
+  color: lightslategray;
 }
 
 .menu-item:hover{
@@ -199,7 +206,50 @@ button img {
   transform: scale(1.1);
   color: aliceblue;
 }
+    /*----------------categories' page's css------------------------*/
+.categories {
+  display: inline;
+  z-index: 5;
+}
 
+.categories>h2 {
+  font-family: 'Merriweather', serif;
+  background-color: lightgray;
+  color: rgb(104, 104, 104);
+  font-size: 3vh;
+  text-align: center;
+}
+
+.products_list{
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1;
+  grid-row: repeat(3, 1fr);
+  gap:4vw;
+}
+
+.products {
+  height: 20vh;;
+  list-style: none;
+  border-bottom: 1px solid lightslategray;
+}
+
+.products>a{
+  padding-left: 1vh;
+  text-decoration: none;
+  font-family: 'Merriweather', serif;
+  font-size: 1.5vh;
+}
+.cover>a{
+  height: 80%;
+}
+.covers{
+  display: flex;
+  padding: 0;
+}
+.cover>a>img{
+  height: 20%;
+}
 @media screen and (min-width : 767px) {
   /*------------ header's css modification for tablets----------*/
   header {
@@ -295,7 +345,7 @@ button img {
 
   .title>h1{
     margin-top: 8vh;
-    margin-left: 20%;
+    margin-left: 30%;
     color: black;
     font-family: 'Fredericka the Great', cursive;
     font-size: 7vh;
@@ -303,9 +353,71 @@ button img {
   
   .title_img {
     padding: 1vh;
-    width: 15vw;
-    height: 15vw;
+    height: 90%;
     margin: 0;
     z-index: 1;
+    border-radius: 0;
   }
-  /*---------------- article's laptop's css---------------*/
+  /*-------------- sliding menu's laptop's css------------*/
+  .hideAndShow {
+    display: flex;
+    opacity: 1;
+    max-height: 1000px;
+  }
+  
+  #menu-button {
+    display: none;
+  }
+  .shown_menu {
+    margin: 4vw;
+    margin-top:auto;
+    margin-bottom: auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows:repeat(1, 1fr);
+    margin-top: 1vh;
+    gap: 5vw;
+  }
+  
+  .menu-item {
+    width: 8vw;
+    height: 2vw;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    border-radius: 5vw;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.25vw 0.25vw 0.25vw lightgray;
+  }
+  
+  .menu-item7{
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    width: 8vw;
+    height: 2vw;
+    border-radius: 5vw;
+    border:1px solid white;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0.5vw 0.5vw 0.5vw lightgray;
+  }
+
+  /*---------------------article's laptop's css--------------*/
+.article{
+  font-family: 'Merriweather', serif;
+  margin-top: 5vh;
+}
+.press{
+  display: block;
+  margin: 5vh;
+  border: 1px solid lightgray;
+  border-radius: 5vh;
+  background-color : gray;
+ }
