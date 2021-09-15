@@ -206,7 +206,26 @@ button img {
   transform: scale(1.1);
   color: aliceblue;
 }
-    /*----------------categories' page's css------------------------*/
+/*------------------footer's css-------------------------------*/
+footer{
+  display: block;
+}
+
+footer>h3{
+  font-family:'Merriweather', serif;
+  font-size: 2.5vh;
+  text-align: center;
+}
+
+.social-icons{
+  display: flex;
+  justify-content: center;
+}
+.social-icons>div>a{
+  padding: 2vh;
+  color: black;
+}
+/*----------------categories' page's css------------------------*/
 .categories {
   display: inline;
   z-index: 5;
@@ -232,6 +251,7 @@ button img {
   height: 20vh;;
   list-style: none;
   border-bottom: 1px solid lightslategray;
+  display: inline;
 }
 
 .products>a{
@@ -240,16 +260,25 @@ button img {
   font-family: 'Merriweather', serif;
   font-size: 1.5vh;
 }
-.cover>a{
-  height: 80%;
+.cover{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin-left: 0;
 }
-.covers{
+.cover>a{
+  height: 100%;
+}
+.cover{
   display: flex;
   padding: 0;
+  height: 70%;
 }
 .cover>a>img{
-  height: 20%;
+  height: 100%;
 }
+
+
 @media screen and (min-width : 767px) {
   /*------------ header's css modification for tablets----------*/
   header {
@@ -421,3 +450,4 @@ button img {
   border-radius: 5vh;
   background-color : gray;
  }
+}
