@@ -162,17 +162,17 @@ button img {
   display: block;
  }
 
-.cover {
+.cover1 {
   display:flex;
   margin-top: 2vh;
-  width: 50%;
+  width: 100%;
+  justify-content: center;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
+  
 }
 
-.cover>img {
-  width: 100%;
+.cover1>img {
+  width: 90%;
 }
 
 .press>p{
@@ -330,6 +330,7 @@ footer>h3{
     align-items: center;
     justify-content: center;
     box-shadow: 0.5vw 0.5vw 0.5vw lightgray;
+    text-align: center;
   }
   
   .menu-item7{
@@ -361,6 +362,13 @@ footer>h3{
   border-radius: 5vh;
   background-color : gray;
  }
+ .cover1{
+   width: 50%;
+   display: flex;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 2vw;
+ }
 }
 
 /*---------------- laptop's css--------------------------*/
@@ -374,7 +382,7 @@ footer>h3{
 
   .title>h1{
     margin-top: 8vh;
-    margin-left: 30%;
+    margin-left: 35%;
     color: black;
     font-family: 'Fredericka the Great', cursive;
     font-size: 7vh;
@@ -405,14 +413,15 @@ footer>h3{
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows:repeat(1, 1fr);
     margin-top: 1vh;
-    gap: 5vw;
+    gap: 1vw;
   }
   
   .menu-item {
-    width: 8vw;
+    width: 12vw;
     height: 2vw;
     font-family: 'Merriweather', serif;
     font-weight: bold;
+    font-size: 0.5vw;
     border-radius: 5vw;
     border: 1px solid white;
     display: flex;
@@ -425,7 +434,7 @@ footer>h3{
     grid-column-start: 7;
     grid-column-end: 8;
     grid-row-start: 1;
-    width: 8vw;
+    width: 12vw;
     height: 2vw;
     border-radius: 5vw;
     border:1px solid white;
@@ -449,5 +458,8 @@ footer>h3{
   border: 1px solid lightgray;
   border-radius: 5vh;
   background-color : gray;
+ }
+ .cover1{
+   margin-top: 2vw;
  }
 }
