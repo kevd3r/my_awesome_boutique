@@ -105,7 +105,7 @@ button img {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 1vw 1vw 1vw lightgray;
+  box-shadow: -0.1vh 0.1vh 1vh lightgrey;
 }
 
 .menu-item>a {
@@ -278,6 +278,59 @@ footer>h3{
   height: 100%;
 }
 
+/*---------------------contact's page's css---------------------*/
+.form-container {
+  font-family: 'Merriweather', serif;
+  display: flex;
+  height: 80%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5vh;
+  margin-top: 2vh;
+  box-shadow: -0.1vh 0.1vh 1vh lightgrey;
+  justify-content: center;
+}
+.contact{
+  padding: 3vh;
+  justify-content: center;
+}
+.form-container h1{
+  font-size: 3vh;
+  text-align: center;
+  margin-top: 0;
+}
+.form-container label{
+  display: block;
+  text-align: start;
+  font-size: 2vh;
+  font-weight: bold;
+  justify-content: center;
+  padding: 0.5vh;
+}
+.contact>input {
+  display: flex;
+  width: 100%;
+  padding: 0.5vh;
+  border: 1px solid lightgray;
+  border-radius: 1vh;
+  margin-bottom: 1vh;
+}
+#contact-button {
+  border-radius: 1vh;
+  margin-top: 1vh;
+  width: 50%;
+  background-color: lightgray;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  box-shadow: -0.1vh 0.1vh 1vh lightgrey;
+  margin-top: 2vh;
+}
+#contact-button:hover {
+  transform: scale(1.1);
+}
 
 @media screen and (min-width : 767px) {
   /*------------ header's css modification for tablets----------*/
@@ -304,7 +357,6 @@ footer>h3{
     display: inline-block;
     z-index: 1;
     border-radius: 50%;
-
   }
   /*-------------- sliding menu's tablet's css------------*/
  
@@ -369,8 +421,12 @@ footer>h3{
    margin-right: auto;
    margin-top: 2vw;
  }
-}
 
+/*---------------contact's tablet's css------------------*/
+.form-container{
+  max-width: 50%;
+}
+}
 /*---------------- laptop's css--------------------------*/
 @media screen and (min-width : 1024px){
   header {

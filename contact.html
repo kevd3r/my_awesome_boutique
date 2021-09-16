@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,26 +60,18 @@
         </div>
       </div>
     </div>
-    <article class="article">
-      <h3>Our Latest Releases</h3>
-      <div class="press">
-        <div class="cover1">
-          <img src="images/covers/Liminanas.jpg" alt="liminanas et laurent garnier">
-        </div>
-        <p claas="pitch"><strong>Limiñanas/Laurent Garnier</strong>, l'association la plus décoiffante de la rentrée
-          Quand le couple le plus garage-rock de l'Hexagone rencontre le DJ pionnier 
-          et producteur, leur album “De película” fait des étincelles. Discussion à 
-          bâtons rompus entre quinquagénaires assoiffés de musiques et jamais rassasiés.</p>
-          <div class="source">
-            <a href="https://www.lesinrocks.com/musique/liminanas-laurent-garnier-lassociation-la-plus-decoiffante-de-la-rentree-402563-11-09-2021/" target="_blank">Source</a>
-          </div>
-            <div class="follow">
-            <button type="submit" class="follow-button" id="follow-button">
-              <a href="#">Lire la suite</a>
-            </button>
-          </div>
-      </div>
-    </article>
+    <div class="form-container">
+        <form  class="contact" method="GET" action="#">
+            <h1>Contactez-nous</h1>
+            <label for="lastname">Nom</label>
+            <input type="text" id="lastname" placeholder="Votre Nom" value=""required>
+            <label for="firstname">Prénom</label>
+            <input type="text" id="firstname" placeholder="Votre Prénom" value=""required>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Votre e-mail" required>
+            <input type="button" id="contact-button" value ="Envoyer">
+        </form>
+    </div>
     <footer>
       <h3>Follow us</h3>
       <div class="social-icons">

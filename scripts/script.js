@@ -1,3 +1,4 @@
+/*---------toggle menu down or up when clicked---------------------*/
 let button = document.getElementById('menu-button');
 let nav = document.getElementById('hideAndShow');
 
@@ -6,7 +7,7 @@ button.addEventListener('click', function(e){
     nav.classList.toggle('is-open');
 });
 
-
+/*------------- changes current's page aspect------------- */
 let url = window.location.pathname;
 console.log(url);
 let tmp = [];
@@ -18,27 +19,20 @@ tables.forEach(function(el){
     console.log(el);
     tmp.push(el.getAttribute('href'));  
 });
-console.log(tmp);
 
+let indice = 0;
+tmp.forEach(function(element){
+  if (element == url){
+    console.log(element);
+    indice = tmp.indexOf(element);
+    console.log(tmp.indexOf(element));
+    console.log(tables[indice]);
+    tables[indice].parentNode.style.backgroundColor ='#464646';
+  }
+});
 
+/*------------------data's submitting form------------------- */
 
-
-
-Array.from(table);
-console.log(table[1]);
-
-
-
-/*
-function currentPage(){
-for (let value of item){
-    if (value == url){
-        /*parentNode.item[i].style.background-color="pink";
-        console.log(value);
-    }
-}
-}
-jQuery(function($){
-    console.log('jQuery est inclus! hosanna !!')
-    
-});*/
+  let firstname = document.getElementById('firstname').value;
+  let lastname = document.getElementById('lastname').value;
+  console.log(firstname.value);
