@@ -32,7 +32,22 @@ tmp.forEach(function(element){
 });
 
 /*------------------data's submitting form------------------- */
-
+function afficher(){
   let firstname = document.getElementById('firstname').value;
   let lastname = document.getElementById('lastname').value;
-  console.log(firstname.value);
+  let tmp2=[firstname, lastname];
+  console.log(tmp2);
+  firstname = firstname.charAt(0).toUpperCase();
+  lastname = lastname.charAt(0).toUpperCase();
+  let newspan = document.createElement('span');
+  let f = document.querySelector('div.form-container');
+    newspan.textContent = 'Bonjour'+' '+firstname+ ' ' +lastname;
+    newspan.style.fontFamily = 'Merriweather, serif';
+    newspan.style.fontSize = '2rem';
+    newspan.style.borderRadius = '50%';
+  
+  f.append(newspan);
+  let c = document.querySelector('form.contact');
+  c.style.display = 'none';
+};
+
