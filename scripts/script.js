@@ -32,6 +32,7 @@ tmp.forEach(function(element){
 });
 
 /*------------------data's submitting form------------------- */
+var initials;
 function afficher(){
   let firstname = document.getElementById('firstname').value;
   let lastname = document.getElementById('lastname').value;
@@ -45,9 +46,27 @@ function afficher(){
     newspan.style.fontFamily = 'Merriweather, serif';
     newspan.style.fontSize = '2rem';
     newspan.style.borderRadius = '50%';
-  
   f.append(newspan);
   let c = document.querySelector('form.contact');
   c.style.display = 'none';
-};
-
+  initials = firstname+lastname;
+}
+console.log(initials);
+const canvas = document.getElementById('contact_initials');
+let sizeCanvas = canvas.getAttribute('width')
+let ctx;
+if (canvas.getContext){
+  ctx = canvas.getContext('2d');
+  console.log(sizeCanvas);
+  ctx.beginPath();
+  ctx.arc(600, 500, sizeCanvas/2, 0, Math.PI*2);
+  ctx.stroke();
+  const sizeText = sizeCanvas/3;
+  ctx.fillStyle = 'cadetblue';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.font =`${sizeText}vh Arial`;
+  ctx.fillText('FF', sizeCanvas/2, sizeCanvas/2);
+}else{
+  console.log('canevas non supporté');
+}
