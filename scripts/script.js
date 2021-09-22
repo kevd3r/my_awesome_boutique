@@ -33,46 +33,65 @@ contactBtn.addEventListener('click', function affiche(){
   firstname = firstname.charAt(0).toUpperCase();
   lastname = lastname.charAt(0).toUpperCase();
   let initials= firstname+lastname;
-  console.log(initials);
   localStorage.setItem('user',JSON.stringify(initials));
   user = JSON.parse(localStorage.getItem('user'));
-  console.log(user);
+  newspan();
+  showInitials();
+  })
+/*----------------- hide form's function if acivated--------*/ 
+function newspan(){
+  let user= JSON.parse(localStorage.getItem('user'));
   let newspan = document.createElement('span');
   let f = document.querySelector('div.form-container');
-    newspan.textContent = 'Bonjour'+' '+firstname+ ' ' +lastname;
+    newspan.textContent = 'Bonjour'+' '+user;
     newspan.style.fontFamily = 'Merriweather, serif';
     newspan.style.fontSize = '2rem';
     newspan.style.borderRadius = '50%';
   f.append(newspan);
   let c = document.querySelector('form.contact');
   c.style.display = 'none';
-  showInitials();
-  })
-
+}
+/*------------- canvas showing initials----------------------*/
 function showInitials (){
   let user =JSON.parse(localStorage.getItem('user'));
-  console.log(user);
   if (user!=null){
-
-      let canvas = document.getElementById('canvas');
-      let sizeCanvas = canvas.getAttribute('width');
-      let ctx;
-        if (canvas.getContext){
-          ctx = canvas.getContext('2d');
-          ctx.beginPath();
-          ctx.arc(sizeCanvas/2, sizeCanvas/2, sizeCanvas/2, 0, Math.PI*2);
-          ctx.fillStyle = "grey";
-          ctx.fill();
-          const sizeText = sizeCanvas/3;
-          ctx.fillStyle = 'orange';
-          ctx.textAlign = 'center';
-          ctx.textBaseline = 'middle';
-          ctx.font =`${sizeText}px Arial`;
-          ctx.fillText(user, sizeCanvas/2, sizeCanvas/2);
+    let canvas = document.getElementById('canvas');
+    let sizeCanvas = canvas.getAttribute('width');
+    let ctx;
+    if (canvas.getContext){
+      ctx = canvas.getContext('2d');
+      ctx.beginPath();
+      ctx.arc(sizeCanvas/2, sizeCanvas/2, sizeCanvas/2, 0, Math.PI*2);
+      ctx.fillStyle = "grey";
+      ctx.fill();
+      const sizeText = sizeCanvas/3;
+      ctx.fillStyle = 'orange';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.font =`${sizeText}px Arial`;
+      ctx.fillText(user, sizeCanvas/2, sizeCanvas/2);
     }else{
-  console.log('canevas non supporté');
-}
-}else{
+    console.log('canevas non supporté');
+    }
+  }else{
   canvas.style.display= none;
+  }
 }
-};
+
+/*------------- let initials if present in localstorage----------- */
+window.onload=function isStill(){
+  let user =JSON.parse(localStorage.getItem('user'));
+  if (user!==null){
+    showInitials(user);
+    isThatU(user);
+  }else{
+    console.log('failed');
+  }
+}
+/*------------asks about id---------------------------------- */
+function isThatU(){
+  let user=JSON.parse(localStorage.getItem('user'));
+  let formTitle = document.getElementById('form-title');
+  console.log(formTitle);
+  formTitle.innerText=`Est-ce vous ${user}?`
+}
