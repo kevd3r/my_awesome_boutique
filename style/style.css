@@ -23,14 +23,25 @@ header {
   margin-top: 15%;
   margin-left: 20%;
 }
-
+.img-link{
+  display: contents;
+}
 .title_img {
   width: 100%;
   margin: 0;
   display: flex;
   z-index: 1;
 }
-
+#canvas-div{
+  display: inline;
+  height: 10vh;
+}
+#canvas{
+  display:flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
 /*--------------high button menu-------------------------*/
 nav {
   display: flex;
@@ -443,7 +454,9 @@ footer>h3{
     font-family: 'Fredericka the Great', cursive;
     font-size: 7vh;
   }
-  
+  .img-link{
+
+  }
   .title_img {
     padding: 1vh;
     height: 90%;
@@ -574,8 +587,4 @@ input[type=radio]{
   transform: translatex(0) scale(1);
   opacity: 1;
   z-index: 2;
-}
-#canvas{
-  width: 80px;
-  height: 80px;
 }

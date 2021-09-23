@@ -51,12 +51,18 @@ function newspan(){
   let c = document.querySelector('form.contact');
   c.style.display = 'none';
 }
-/*------------- canvas showing initials----------------------*/
+/*------------- canvas showing initials normally responsive----------------------*/
 function showInitials (){
   let user =JSON.parse(localStorage.getItem('user'));
   if (user!=null){
     let canvas = document.getElementById('canvas');
-    let sizeCanvas = canvas.getAttribute('width');
+    let sizeCanvas = canvas.getAttribute('height');
+    let vh = window.innerHeight;
+    let  resize = parseInt(sizeCanvas);
+    let newWidth = Math.floor((resize*vh)/100);
+    console.log(newWidth);
+    sizeCanvas = newWidth;
+    console.log(sizeCanvas);
     let ctx;
     if (canvas.getContext){
       ctx = canvas.getContext('2d');
@@ -92,6 +98,5 @@ window.onload=function isStill(){
 function isThatU(){
   let user=JSON.parse(localStorage.getItem('user'));
   let formTitle = document.getElementById('form-title');
-  console.log(formTitle);
   formTitle.innerText=`Est-ce vous ${user}?`
 }
