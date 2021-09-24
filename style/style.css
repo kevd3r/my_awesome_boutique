@@ -33,14 +33,15 @@ header {
   z-index: 1;
 }
 #canvas-div{
-  display: inline;
-  height: 10vh;
+  display: block;
+  width: auto;
+  background-color: aqua;
+  margin-left: auto;
 }
 #canvas{
   display:flex;
-  justify-content: center;
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 /*--------------high button menu-------------------------*/
 nav {

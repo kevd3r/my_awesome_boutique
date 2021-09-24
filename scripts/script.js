@@ -55,13 +55,14 @@ function newspan(){
 function showInitials (){
   let user =JSON.parse(localStorage.getItem('user'));
   if (user!=null){
-    let canvas = document.getElementById('canvas');
+    let canvas = document.getElementById('canvas-div');
     let sizeCanvas = canvas.getAttribute('height');
+    console.log(sizeCanvas);
     let vh = window.innerHeight;
     let  resize = parseInt(sizeCanvas);
     let newWidth = Math.floor((resize*vh)/100);
     console.log(newWidth);
-    sizeCanvas = newWidth;
+    sizeCanvas = Math.floor(newWidth/2);
     console.log(sizeCanvas);
     let ctx;
     if (canvas.getContext){
